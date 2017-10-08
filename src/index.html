@@ -118,6 +118,15 @@
 
 </body>
 <script>
+    firebase.auth().onAuthStateChanged(function(authData) {
+        if (authData) {
+            console.log("User " + authData.uid + " Email: " + authData.email);
+            document.getElementById("Email").innerHTML = "Logged in as: " + authData.email;
+
+        } else {
+            console.log("User is logged out");
+        }
+    });
     var stringEmail;
     var userID;
     function e() {
@@ -146,7 +155,7 @@
         else {
             console.log("User is null");
         }
-        document.getElementById("btnLogOut").style.visibility = "hidden";
+        document.getElementById("btnLogOut").style.visibility = "visible";
         document.getElementById("btnLogin").style.visibility = "hidden";
         document.getElementById("emailInput").style.visibility = "hidden";
         document.getElementById("password").style.visibility = "hidden";
@@ -166,9 +175,7 @@
         document.getElementById("password").style.visibility = "hidden";
     }
     function displayEmail(){
-        document.getElementById("password").style.visibility = "visible";
         document.getElementById("password").style.visibility = "hidden";
-
         document.getElementById("Email").innerHTML = "Logged in as: " + stringEmail;
     }
 
