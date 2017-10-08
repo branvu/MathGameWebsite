@@ -73,8 +73,9 @@
     </nav>
 </header>
 
-<body onload="">
+<body onunload="signout()">
 <h1>Welcome! Try and reach the highest level in this challenging math game!!!</h1>
+<h3>If you don't have an account: <br> <strong>Email</strong>: guestUser@game.org <br> <strong>Password</strong>: mathisfun</h3>
 <div class="container-fluid" id="CanvasContainer" onload="initCanvas()">
     <div id="Menu">
         <p id="N-BackTitle"> Fun Math Game!</p>
@@ -118,6 +119,7 @@
 
 </body>
 <script>
+    var userIsAuthed = false;
     firebase.auth().onAuthStateChanged(function(authData) {
         if (authData) {
             console.log("User " + authData.uid + " Email: " + authData.email);
@@ -137,24 +139,14 @@
 
         var emailVal = txtEmail.toString();
         var passwordVal = password.toString();
+        userIsAuthed = true;
         firebase.auth().signInWithEmailAndPassword(emailVal,passwordVal).catch(function error(){
             var errorCode = error.code;
             var errormessage = error.message;
-            console.log("Error Code: " + errorCode + " Error Message " + errormessage);
+            console.log("Unable to Sign in");
+            userIsAuthed = false;
         });
-        var user = firebase.auth().currentUser;
 
-        if (user !== null) {
-            user.providerData.forEach(function (profile) {
-                console.log("Email: "+ profile.email);
-                stringEmail = profile.email.toString();
-            });
-            userID = user.uid;
-            console.log(userID);
-        }
-        else {
-            console.log("User is null");
-        }
         document.getElementById("btnLogOut").style.visibility = "visible";
         document.getElementById("btnLogin").style.visibility = "hidden";
         document.getElementById("emailInput").style.visibility = "hidden";
@@ -167,7 +159,7 @@
     function signout(){
         //console.log("User is: " + firebase.auth().currentUser.toString());
         firebase.auth().signOut().then(function g() {
-            console.log("Signed out");
+            userIsAuthed = false;
         });
         document.getElementById("btnLogOut").style.visibility = "hidden";
         document.getElementById("btnLogin").style.visibility = "hidden";
@@ -187,9 +179,9 @@
 
     body #contain{
         text-align: center;
-        position: absolute;
-        top: 55%;
-        left: 19%;
+        position: relative;
+        top: 120px;
+
     }
 </style>
 

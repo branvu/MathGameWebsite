@@ -56,22 +56,29 @@ function instructionsPressed() {
 }
 
 function startPressed() {
-    document.getElementById("btnLogOut").style.visibility = "hidden";
-    document.getElementById("btnLogin").style.visibility = "hidden";
-    document.getElementById("emailInput").style.visibility = "hidden";
-    document.getElementById("password").style.visibility = "hidden";
-    document.getElementById("Menu").style.visibility = "hidden";
-    document.getElementById("EndScreen").style.visibility = "hidden";
-    document.getElementById("Game").style.visibility = "visible";
-    document.getElementById("NextLevel").style.visibility = "hidden";
-    document.getElementById("levelInfo").style.visibility = "hidden";
-    document.getElementById("encouragement").style.visibility = "hidden";
-    document.getElementById("score").style.visibility = "hidden";
-    document.getElementById("demo").style.visibility = "hidden";
-    document.getElementById("solution").style.visibility = "hidden";
+    if(userIsAuthed) {
+        document.getElementById("btnLogOut").style.visibility = "hidden";
+        document.getElementById("btnLogin").style.visibility = "hidden";
+        document.getElementById("emailInput").style.visibility = "hidden";
+        document.getElementById("password").style.visibility = "hidden";
+        document.getElementById("Menu").style.visibility = "hidden";
+        document.getElementById("EndScreen").style.visibility = "hidden";
+        document.getElementById("Game").style.visibility = "visible";
+        document.getElementById("NextLevel").style.visibility = "hidden";
+        document.getElementById("levelInfo").style.visibility = "hidden";
+        document.getElementById("encouragement").style.visibility = "hidden";
+        document.getElementById("score").style.visibility = "hidden";
+        document.getElementById("demo").style.visibility = "hidden";
+        document.getElementById("solution").style.visibility = "hidden";
 
-    counter = 0;
-    init();
+        counter = 0;
+        init();
+    }
+    else{
+        console.log("Not authorized");
+        document.getElementById("N-BackTitle").innerHTML = "Please refresh and log in";
+
+    }
 }
 
 function reduceTime() {
