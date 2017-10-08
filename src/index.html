@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fun Math Game</title>
+    <meta charset="UTF-8">
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107735086-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-107735086-1');
+    </script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-7617187076378038",
+            enable_page_level_ads: true
+        });
+    </script>
+    <script
+            src="https://code.jquery.com/jquery-1.9.1.js"
+            integrity="sha256-e9gNBsAcA0DBuRWbm0oZfbiCyhjLrI6bmqAl5o+ZjUA="
+            crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="MainPageStyle.css" type="text/css">
+    <script type="text/javascript" src="MainOptimized.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAaSzzieBpf6o9eetX4r-dx2g-dn9KkphE",
+            authDomain: "trainingwebsite-de28b.firebaseapp.com",
+            databaseURL: "https://trainingwebsite-de28b.firebaseio.com",
+            projectId: "trainingwebsite-de28b",
+            storageBucket: "trainingwebsite-de28b.appspot.com",
+            messagingSenderId: "553834065127"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+</head>
+<div id="Email"></div>
+<header>
+    <p id="Title">Fun Math Game</p>
+    <nav class="navbar navbar-inverse navbar-fixed-top ">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand">Fun Math Game!</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">The Game</a></li>
+                <li><a href="Instructions.html">Instructions</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<body onload="">
+<h1>Welcome! Try and reach the highest level in this challenging math game!!!</h1>
+<div class="container-fluid" id="CanvasContainer" onload="initCanvas()">
+    <div id="Menu">
+        <p id="N-BackTitle"> Fun Math Game!</p>
+        <canvas id="menuCanvas" width="550" height="550"></canvas>
+        <button id="start" type="button" class="btn btn-secondary btn-lg " onclick="startPressed()">Start</button>
+        <button id="instructions" type="button" class="btn btn-secondary btn-lg " onclick="instructionsPressed()">
+            Demo
+        </button>
+
+    </div>
+    <div id="Game">
+        <div id="solution"></div>
+        <canvas id="GameCanvas" width="550" height="550"></canvas>
+        <form id="Input" class="form-group" onsubmit="return false">
+            <input class="form-control" autocomplete="off" type="text" id="Answer" onkeydown="saveAnswer(),bIsPressed()">
+        </form>
+        <div id="number"></div>
+        <div id="score"></div>
+        <div id="encouragement"></div>
+        <div id="demo"></div>
+
+    </div>
+    <div id="NextLevel">
+        <canvas id="NextLevelCanvas" width="550" height="550"></canvas>
+        <div id="NextText"></div>
+        <div id="levelInfo"></div>
+        <button id="ready" type="button" class="btn btn-secondary btn-lg" onclick="startPressed()">Ready?</button>
+    </div>
+    <div id="EndScreen">
+        <canvas id="endCanvas" width="550" height="550"></canvas>
+        <button id="reset" onclick="resetPressed()">Reset</button>
+    </div>
+</div>
+
+<div class="container" id="contain">
+    <input id="emailInput" type="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+    <button id="btnLogin" class = "btn btn-action" onclick="e()">Log In</button>
+    <button id="btnLogOut" class = "btn btn-action" onclick="signout()">Log Out</button>
+</div>
+
+</body>
+<script>
+    var stringEmail;
+    var userID;
+    function e() {
+        var txtEmail = document.getElementById("emailInput").value;
+        var password = document.getElementById("password").value;
+        var btnLogIn = document.getElementById("btnLogin").value;
+        var btnLogOut = document.getElementById("btnLogOut").value;
+
+        var emailVal = txtEmail.toString();
+        var passwordVal = password.toString();
+        firebase.auth().signInWithEmailAndPassword(emailVal,passwordVal).catch(function error(){
+            var errorCode = error.code;
+            var errormessage = error.message;
+            console.log("Error Code: " + errorCode + " Error Message " + errormessage);
+        });
+        var user = firebase.auth().currentUser;
+
+        if (user !== null) {
+            user.providerData.forEach(function (profile) {
+                console.log("Email: "+ profile.email);
+                stringEmail = profile.email.toString();
+            });
+            userID = user.uid;
+            console.log(userID);
+        }
+        else {
+            console.log("User is null");
+        }
+        document.getElementById("btnLogOut").style.visibility = "hidden";
+        document.getElementById("btnLogin").style.visibility = "hidden";
+        document.getElementById("emailInput").style.visibility = "hidden";
+        document.getElementById("password").style.visibility = "hidden";
+
+        // document.getElementById("contain").style.visibility = "hidden";
+        displayEmail();
+
+    }
+    function signout(){
+        //console.log("User is: " + firebase.auth().currentUser.toString());
+        firebase.auth().signOut().then(function g() {
+            console.log("Signed out");
+        });
+        document.getElementById("btnLogOut").style.visibility = "hidden";
+        document.getElementById("btnLogin").style.visibility = "hidden";
+        document.getElementById("emailInput").style.visibility = "hidden";
+        document.getElementById("password").style.visibility = "hidden";
+    }
+    function displayEmail(){
+        document.getElementById("password").style.visibility = "visible";
+        document.getElementById("password").style.visibility = "hidden";
+
+        document.getElementById("Email").innerHTML = "Logged in as: " + stringEmail;
+    }
+
+</script>
+<style>
+    #btnLogOut{
+        visibility: hidden;
+    }
+
+    body #contain{
+        text-align: center;
+        position: absolute;
+        top: 55%;
+        left: 19%;
+    }
+</style>
+
+</html>

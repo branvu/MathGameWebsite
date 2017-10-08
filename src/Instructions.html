@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instructions</title>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107735086-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-107735086-1');
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-7617187076378038",
+            enable_page_level_ads: true
+        });
+    </script>
+    <script
+            src="https://code.jquery.com/jquery-1.9.1.js"
+            integrity="sha256-e9gNBsAcA0DBuRWbm0oZfbiCyhjLrI6bmqAl5o+ZjUA="
+            crossorigin="anonymous"></script>
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<header onload="initCanvas()">
+
+    <p id="Title">Fun Math Game</p>
+    <nav class="navbar navbar-inverse navbar-fixed-top ">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand">Fun Math Game!</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">The Game</a> </li>
+                <li class="active"><a href="Instructions.html">Instructions</a> </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<style>
+    .navbar-inverse{
+        background-color: #007bff;
+        border-color: #E7E7E7;
+    }
+    .navbar-inverse .navbar-nav > li > a{
+        color: black;
+        font-weight: bold;
+        font-size: 150%;
+    }
+    header .container-fluid{
+        background-color: #377bbd;
+    }
+    .navbar-brand{
+        color: black;
+        font-weight: bold;
+        font-size: 150%;
+    }
+
+    body{
+        background-color: #bbdbe6;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h1{
+        position: relative;
+        top: auto;
+        border: 5px solid darkgoldenrod;
+        padding: 0px;
+        background-color: deeppink;
+        color: darksalmon;
+        font-size: 150px;
+        margin-bottom: 0;
+    }
+    h2{
+        border: 10px solid dodgerblue;
+        background-color: #f5c6cb;
+        padding: 10px;
+        top: 0;
+        margin-top: 0px;
+    }
+    h3{
+        border: 10px solid dodgerblue;
+        background-color: #f5c6cb;
+        padding: 0px;
+        top: 0;
+        margin: 0px;
+        text-align: center;
+        font-size: 30px;
+    }
+    h4{
+        border: 10px solid dodgerblue;
+        background-color: #f5c6cb;
+        padding: 10px;
+        top: 0;
+        margin-top: 5px;
+        text-align: center;
+        font-size: 20px;
+    }
+</style>
+<body>
+<div class="container-fluid">
+    <h1 class="text-center"> <strong>How to Play!!!</strong></h1>
+<h2 class="text-center"> To play this game, you have to add numbers! In the beginning levels, add the previous number <br>
+    and the current number and enter the sum. For example, if 2 is on the screen <br>
+and then 3 is on the screen. Add 2 and 3. Now, when another number appears-let's say 4, then you <br>
+will need to add 3 and 4 together and then if 5 appears, add 4 and 5. <br>
+    You are always adding the previous number and the current number together. Look at the demo for additional help.  <br>
+</h2>
+    <h3>
+        Initial time between numbers - <strong>3s</strong><br>
+        Initial range of the numbers - <strong>0-9</strong><br>
+
+    </h3>
+    <h4>
+        When you reach a high enough level, the <strong>"Increased (secret)"</strong> means that
+        instead of adding 2 numbers, you now have to add 3, <br> so you are adding the previous + previous
+        + current number. This will be harder and more challenging, but the time and range will be set <br>
+        back to the initial.
+    </h4>
+</div>
+</body>
+</body>
+</html>

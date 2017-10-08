@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>N-Back Test</title>
+    <meta charset="UTF-8">
+    <script
+            src="https://code.jquery.com/jquery-1.9.1.js"
+            integrity="sha256-e9gNBsAcA0DBuRWbm0oZfbiCyhjLrI6bmqAl5o+ZjUA="
+            crossorigin="anonymous"></script>
+
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="MainPageStyle.css" type="text/css">
+    <script type="text/javascript" src="MainOptimized.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAaSzzieBpf6o9eetX4r-dx2g-dn9KkphE",
+            authDomain: "trainingwebsite-de28b.firebaseapp.com",
+            databaseURL: "https://trainingwebsite-de28b.firebaseio.com",
+            projectId: "trainingwebsite-de28b",
+            storageBucket: "trainingwebsite-de28b.appspot.com",
+            messagingSenderId: "553834065127"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+</head>
+
+<header onload="initCanvas()">
+    <p id="Title">N-Back Test </p>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand">N-Back Training</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a> </li>
+                <li><a href="Instructions.html">Instructions</a> </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<body>
+ <div class="container-fluid" id="CanvasContainer">
+    <div id="Menu">
+        <p id="N-BackTitle"> N-Back Training</p>
+        <canvas id="menuCanvas" width="550" height="550"></canvas>
+        <button id="start" type="button" class="btn btn-secondary btn-lg " onclick="startPressed()">Start</button>
+    </div>
+    <div id="Game">
+        <canvas id="GameCanvas" width="550" height="550"></canvas>
+        <form id="Input" class="form-group" onsubmit="return false">
+            <input class="form-control" autocomplete="off" type="text" id = "Answer" onkeydown="saveAnswer()" >
+        </form>
+        <div id="number"></div>
+        <p id="LateText">Too Late</p>
+        <div id="score"></div>
+        <div id = "encouragement"></div>
+
+    </div>
+    <div id="NextLevel">
+        <canvas id="NextLevelCanvas" width="550" height="550"></canvas>
+        <div id="NextText"></div>
+        <div id="levelInfo"></div>
+        <button id="ready" type="button" class="btn btn-secondary btn-lg" onclick="startPressed()">Ready?</button>
+
+    </div>
+    <div id = "EndScreen">
+        <canvas id="endCanvas" width="550" height="550"></canvas>
+        <button id="reset" onclick="resetPressed()">Reset</button>
+    </div>
+</div>
+
+</body>
+</html>

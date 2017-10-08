@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>N-Back Test</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../MainPageStyle.css" type="text/css">
+    <script type="text/javascript" src="MainPageGame.js"></script>
+
+</head>
+
+<header onload="">
+    <p id="Title">N-Back Test </p>
+    <nav id="Navigation">
+        <ul>
+            <li id="HomeLink"><a href="MainPage.html">Home</a></li>
+            <li id="AboutLink"><a href="../About.html">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+<h1>(Instructions)</h1>
+<div id="CanvasContainer">
+    <div id="Menu">
+        <p id="N-BackTitle"> 2-Back Addition</p>
+        <canvas id="menuCanvas" width="600" height="600"></canvas>
+        <button id="start" onclick="startPressed(),displayNumber()">Start</button>
+    </div>
+    <div id="gameCanvas">
+        <canvas id="Canvas" width="600" height="600"></canvas>
+        <form id="Input" onsubmit="return false">
+            <input type="text" id = "Answer" onkeydown="saveAnswer()" autofocus = "autofocus">
+        </form>
+        <div id="number"></div>
+        <p id="LateText">Too Late</p>
+    </div>
+</div>
+
+</body>
+</html>

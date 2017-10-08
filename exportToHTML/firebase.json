@@ -1,0 +1,21 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "redirects": [
+      {
+        "source": "index.html",
+        "destination": "/",
+        "type": 302
+      }
+    ]
+
+  }
+}

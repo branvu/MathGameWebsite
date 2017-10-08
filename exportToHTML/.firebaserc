@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "trainingwebsite-de28b",
+    "staging": "trainingwebsite-de28b"
+  }
+}
