@@ -111,8 +111,8 @@
 </div>
 
 <div class="container" id="contain">
-    <input id="emailInput" type="email" placeholder="Email">
-    <input id="password" type="password" placeholder="Password">
+    <input id="emailInput" type="email" placeholder="Email" onkeypress="loginWithEnter()">
+    <input id="password" type="password" placeholder="Password" onkeypress="loginWithEnter()">
     <button id="btnLogin" class = "btn btn-action" onclick="e()">Log In</button>
     <button id="btnLogOut" class = "btn btn-action" onclick="signout()">Log Out</button>
 </div>
@@ -133,28 +133,35 @@
     var stringEmail;
 
     function e() {
-        var txtEmail = document.getElementById("emailInput").value;
-        var password = document.getElementById("password").value;
-        var btnLogIn = document.getElementById("btnLogin").value;
-        var btnLogOut = document.getElementById("btnLogOut").value;
 
-        var emailVal = txtEmail.toString();
-        var passwordVal = password.toString();
-        userIsAuthed = true;
-        firebase.auth().signInWithEmailAndPassword(emailVal,passwordVal).catch(function error(){
-            var errorCode = error.code;
-            var errormessage = error.message;
-            console.log("Unable to Sign in");
-            userIsAuthed = false;
-        });
-        document.getElementById("btnLogOut").style.visibility = "visible";
-        document.getElementById("btnLogin").style.visibility = "hidden";
-        document.getElementById("emailInput").style.visibility = "hidden";
-        document.getElementById("password").style.visibility = "hidden";
+            var txtEmail = document.getElementById("emailInput").value;
+            var password = document.getElementById("password").value;
+            var btnLogIn = document.getElementById("btnLogin").value;
+            var btnLogOut = document.getElementById("btnLogOut").value;
 
-        // document.getElementById("contain").style.visibility = "hidden";
-        displayEmail();
+            var emailVal = txtEmail.toString();
+            var passwordVal = password.toString();
+            userIsAuthed = true;
+            firebase.auth().signInWithEmailAndPassword(emailVal, passwordVal).catch(function error() {
+                var errorCode = error.code;
+                var errormessage = error.message;
+                console.log("Unable to Sign in");
+                userIsAuthed = false;
+            });
+            document.getElementById("btnLogOut").style.visibility = "visible";
+            document.getElementById("btnLogin").style.visibility = "hidden";
+            document.getElementById("emailInput").style.visibility = "hidden";
+            document.getElementById("password").style.visibility = "hidden";
 
+            // document.getElementById("contain").style.visibility = "hidden";
+            displayEmail();
+
+    }
+    function loginWithEnter(){
+        var key = event.keyCode;
+        if(key === 13){
+            e();
+        }
     }
     function signout(){
         //console.log("User is: " + firebase.auth().currentUser.toString());
