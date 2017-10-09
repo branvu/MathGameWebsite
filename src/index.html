@@ -120,17 +120,18 @@
 </body>
 <script>
     var userIsAuthed = false;
+    var userID;
     firebase.auth().onAuthStateChanged(function(authData) {
         if (authData) {
             console.log("User " + authData.uid + " Email: " + authData.email);
             document.getElementById("Email").innerHTML = "Logged in as: " + authData.email;
-
+            userID = authData.uid;
         } else {
             console.log("User is logged out");
         }
     });
     var stringEmail;
-    var userID;
+
     function e() {
         var txtEmail = document.getElementById("emailInput").value;
         var password = document.getElementById("password").value;
@@ -146,7 +147,6 @@
             console.log("Unable to Sign in");
             userIsAuthed = false;
         });
-
         document.getElementById("btnLogOut").style.visibility = "visible";
         document.getElementById("btnLogin").style.visibility = "hidden";
         document.getElementById("emailInput").style.visibility = "hidden";
