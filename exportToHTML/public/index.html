@@ -110,9 +110,9 @@
     </div>
 </div>
 
-<div class="container" id="contain">
-    <input id="emailInput" type="email" placeholder="Email" onkeypress="loginWithEnter()">
-    <input id="password" type="password" placeholder="Password" onkeypress="loginWithEnter()">
+<div class="container" id="inputs">
+    <input id="emailInput" type="email" class="form-control" autocomplete="on" placeholder="Email" onkeypress="loginWithEnter()">
+    <input id="password"  class="form-control" autocomplete="on" type="password" placeholder="Password" onkeypress="loginWithEnter()">
     <button id="btnLogin" class = "btn btn-action" onclick="e()">Log In</button>
     <button id="btnLogOut" class = "btn btn-action" onclick="signout()">Log Out</button>
 </div>
@@ -184,11 +184,21 @@
         visibility: hidden;
     }
 
-    body #contain{
-        text-align: center;
+    #inputs{
         position: relative;
-        top: 120px;
+        left: 32%;
+        top: 100px;
 
+    }
+    #btnLogin{
+        position: absolute;
+    }
+    #password{
+        width: 100px;
+
+    }
+    #emailInput{
+        width: 200px;
     }
 </style>
 

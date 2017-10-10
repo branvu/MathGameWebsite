@@ -17,6 +17,21 @@ function isProduct(yes) {
 function initCanvas(){
 
 }
+var maxTime = 30000;
+var timerID = 0;
+var pastTime = 0;
+var timeElapsed = 0;
+var timeLeft = maxTime;
+function timeUp(){
+    clearTimeout(timerID);
+    //Show that the training session ended and record the level and other stats
+
+}
+function breakTimer(){
+    clearTimeout(timerID);
+    timeElapsed = Date.now() - pastTime;
+    timeLeft -= timeElapsed;
+}
 function resetVariables() {
     answer = undefined;
     lastIndex = 0;
@@ -72,11 +87,13 @@ function startPressed() {
         document.getElementById("solution").style.visibility = "hidden";
 
         counter = 0;
+        timerID = setTimeout(timeUp,timeLeft);
+        pastTime = Date.now();
         init();
     }
     else{
         console.log("Not authorized");
-        document.getElementById("N-BackTitle").innerHTML = "Please refresh and log in";
+        document.getElementById("N-BackTitle").innerHTML = "Please refresh and Login again";
 
     }
 }
@@ -105,6 +122,8 @@ function nextLevel() {
     document.getElementById("demo").style.visibility = "hidden";
     clearAnswerBox();
     isitnextLevel = true;
+
+    breakTimer();
 
 }
 
@@ -175,6 +194,11 @@ var timeExpiredID = 0;
 var nextLevelString = "Next Level Congratulations!";
 var isitnextLevel = false;
 
+
+if(timeLeft < 0){
+    console.log("Time Left Ended " + timeLeft);
+    timeUp();
+}
 function init() {
     isProduct(false);//Set this to true to get multiplication or in level, change yes2
     sum = zeroOrOne;
@@ -241,7 +265,9 @@ function displayNewNumber() {
     }
 
     displayStatements();
-
+    timeElapsed = Date.now() - pastTime;
+    timeLeft -= timeElapsed;
+    pastTime = Date.now();
 
 }
 
@@ -312,6 +338,8 @@ function checkAnswer() {
 
         correct = false;
     }
+
+
     //console.log(correct);
     // if(numOfNums > 1 && numberCorrect > 1){end();}
     isitnextLevel = false;
