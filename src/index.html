@@ -57,7 +57,6 @@
     </script>
 
 </head>
-<div id="Email"></div>
 <header>
     <p id="Title">Fun Math Game</p>
     <nav class="navbar navbar-inverse navbar-fixed-top ">
@@ -79,6 +78,8 @@
 <div class="container-fluid" id="CanvasContainer" onload="initCanvas()">
     <div id="Menu">
         <p id="N-BackTitle"> Fun Math Game!</p>
+        <div id="Email"></div>
+        <p id="LoginError">Login failed. Try again</p>
         <canvas id="menuCanvas" width="550" height="550"></canvas>
         <button id="start" type="button" class="btn btn-secondary btn-lg " onclick="startPressed()">Start</button>
         <button id="instructions" type="button" class="btn btn-secondary btn-lg " onclick="instructionsPressed()">
@@ -108,14 +109,15 @@
         <canvas id="endCanvas" width="550" height="550"></canvas>
         <button id="reset" onclick="resetPressed()">Reset</button>
     </div>
+    <div class="container" id="inputs">
+        <input id="emailInput" type="email" class="form-control" autocomplete="on" placeholder="Email" onkeypress="loginWithEnter()">
+        <input id="password"  class="form-control" autocomplete="on" type="password" placeholder="Password" onkeypress="loginWithEnter()">
+        <button id="btnLogin" class = "btn btn-action" onclick="e()">Log In</button>
+        <button id="btnLogOut" class = "btn btn-action" onclick="signout()">Log Out</button>
+    </div>
 </div>
 
-<div class="container" id="inputs">
-    <input id="emailInput" type="email" class="form-control" autocomplete="on" placeholder="Email" onkeypress="loginWithEnter()">
-    <input id="password"  class="form-control" autocomplete="on" type="password" placeholder="Password" onkeypress="loginWithEnter()">
-    <button id="btnLogin" class = "btn btn-action" onclick="e()">Log In</button>
-    <button id="btnLogOut" class = "btn btn-action" onclick="signout()">Log Out</button>
-</div>
+
 
 </body>
 <script>
@@ -147,6 +149,7 @@
                 var errormessage = error.message;
                 console.log("Unable to Sign in");
                 userIsAuthed = false;
+                document.getElementById("LoginError").style.visibility = "visible";
             });
             document.getElementById("btnLogOut").style.visibility = "visible";
             document.getElementById("btnLogin").style.visibility = "hidden";
@@ -181,23 +184,29 @@
 </script>
 <style>
     #btnLogOut{
+        position: absolute;
+        left: 215px;
         visibility: hidden;
     }
 
-    #inputs{
-        position: relative;
-        left: 32%;
-        top: 100px;
-
+    body #inputs{
+        position: absolute;
+        left: 10%;
+        top: 180px;
+        text-align: center;
     }
     #btnLogin{
         position: absolute;
+        left: 215px;
     }
     #password{
+        position: absolute;
+        top: 35px;
         width: 100px;
 
     }
     #emailInput{
+        position: absolute;
         width: 200px;
     }
 </style>

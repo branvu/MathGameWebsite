@@ -24,7 +24,7 @@ body #CanvasContainer{
     display: block;
     margin: 0 auto;
     text-align: center;
-    top: -60px;
+    top: -70px;
 }
 body #Menu{
     position: absolute;
@@ -95,7 +95,7 @@ body #ready{
     position: absolute;
     top: 50%;
     text-align: center;
-    left: 30%;
+    left: 40%;
 }
 body #back{
     font-size: 10px;
@@ -196,6 +196,16 @@ body #N-BackTitle{
     font-weight: bold;
     font-size: 50px;
 }
+body #LoginError{
+    position: absolute;
+    text-align: center;
+    top: 10%;
+    left: 15%;
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 30px;
+    visibility: hidden;
+}
 body #encouragement{
     position: absolute;
     top: 10px;
@@ -219,7 +229,7 @@ body #NextText {
     position: absolute;
     text-align: center;
     top: 60px;
-    left: 150px;
+    left: 125px;
     font-size: 100px;
     font-weight: bold;
     color: darkblue;
@@ -239,7 +249,7 @@ body{
 }
 h1{
     font-weight: bold;
-    font-size: 80px;
+    font-size: 50px;
     border: 5px solid salmon;
     text-align: center;
     background-color: deeppink;
@@ -253,7 +263,7 @@ h1{
 #Email{
     font-size: 20px;
     position: absolute;
-    margin-top: 17%;
-    margin-left: 35%;
+    top: 5%;
+    left: 5%;
     z-index: 1;
 }

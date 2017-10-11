@@ -47,6 +47,7 @@ function resetVariables() {
     numberCorrect = 0;
     isProduct(yes2);
 }
+
 function back(){
     instructions = false;
 
@@ -93,7 +94,8 @@ function startPressed() {
     }
     else{
         console.log("Not authorized");
-        document.getElementById("N-BackTitle").innerHTML = "Please refresh and Login again";
+        document.getElementById("N-BackTitle").style.visibility = "hidden";
+        document.getElementById("LoginError").style.visibility = "visible";
 
     }
 }
@@ -283,8 +285,7 @@ function displayStatements() {
 function display(string) {
     document.getElementById("number").innerHTML = string;
 }
-function bIsPressed(){
-
+function bIsPressed(){//Currently Unused
     var code = event.keyCode;
     if(code === 66 && instructions){
         back();
