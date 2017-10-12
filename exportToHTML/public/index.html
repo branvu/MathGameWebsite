@@ -150,6 +150,7 @@
             var errormessage = error.message;
             console.log("Unable to Sign in");
             userIsAuthed = false;
+            document.getElementById("N-BackTitle").style.visibility = "hidden";
             document.getElementById("LoginError").style.visibility = "visible";
         });
         document.getElementById("btnLogOut").style.visibility = "visible";

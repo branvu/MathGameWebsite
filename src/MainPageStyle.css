@@ -198,9 +198,8 @@ body #N-BackTitle{
 }
 body #LoginError{
     position: absolute;
-    text-align: center;
     top: 10%;
-    left: 15%;
+    left: 23%;
     color: #dc3545;
     font-weight: bold;
     font-size: 30px;
