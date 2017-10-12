@@ -25,7 +25,6 @@ var timeLeft = maxTime;
 function timeUp(){
     clearTimeout(timerID);
     //Show that the training session ended and record the level and other stats
-
 }
 function breakTimer(){
     clearTimeout(timerID);
@@ -122,6 +121,7 @@ function nextLevel() {
     document.getElementById("Game").style.visibility = "hidden";
     document.getElementById("Input").style.visibility = "hidden";
     document.getElementById("demo").style.visibility = "hidden";
+    document.getElementById("DescriptionDemo").style.visibility = "hidden";
     clearAnswerBox();
     isitnextLevel = true;
 
@@ -149,7 +149,7 @@ function stopDisplay() {
 }
 
 function resetPressed() {
-    startPressed();
+    back();
 }
 
 function clearEncouragement() {
@@ -205,9 +205,9 @@ function init() {
     isProduct(false);//Set this to true to get multiplication or in level, change yes2
     sum = zeroOrOne;
     array.push(randomNumber().toString());
-    console.log("counter " + counter);
+    //console.log("counter " + counter);
 
-    console.log("randomNum " + array[counter]);
+    //console.log("randomNum " + array[counter]);
     display(array[counter]);
 
     counter++;
@@ -233,6 +233,7 @@ function realNumber() {
         document.getElementById("demo").innerHTML = returnSum.toString();
         document.getElementById("demo").style.visibility = "visible";
         document.getElementById("solution").style.visibility = "visible";
+        document.getElementById("DescriptionDemo").style.visibility = "visible";
 
     }
     intervalID = setInterval(displayNewNumber, deltaTime);
@@ -260,7 +261,7 @@ function displayNewNumber() {
             document.getElementById("Answer").style.backgroundColor = "red";
         }
         timeExpiredID = setInterval(clearTimeExpired, 400);
-        console.log("Incremented from display");
+        console.log("No answer found");
     }
     else {
         clearAnswerBox();
@@ -370,7 +371,7 @@ function checkAnswer() {
         }
         nextLevel();
     }
-    else if (level > 6 && level <= 8 && Math.round(numberCorrect / numOfNums) >= 0.70 && numOfNums > 5 && correct) {
+    else if (level > 6 && level < 8 && Math.round(numberCorrect / numOfNums) >= 0.70 && numOfNums > 5 && correct) {
         level++;
         nextLevelString = "Level " + level.toString();
         if (level === 6) {
@@ -386,12 +387,20 @@ function checkAnswer() {
     else if (level === 8 && Math.round(numberCorrect / numOfNums) >= 0.80 && numOfNums > 10 && correct) {
         level++;
         nextLevelString = "Level " + level.toString();
-        document.getElementById("levelInfo").innerHTML = "Increased Potatoes";
+        document.getElementById("levelInfo").style.fontSize = "25px";
+        document.getElementById("levelInfo").style.fontWeight = "strong";
+        document.getElementById("levelInfo").innerHTML = "Increased Potatoes! Now you have to memorize the last two numbers and add the current";
+
+        document.getElementById("levelInfo").style.fontSize = "75px";
+        document.getElementById("levelInfo").style.fontWeight = "normal";
+
         nBack++;
         resetTime();
         resetRange();
+        nextLevel();
     }
     if (Math.round(numberCorrect / numOfNums) >= 0.70 && numOfNums > 6 && level > 8 && level <= 11 && correct) {
+        level++;
         if (level === 11) {
             document.getElementById("levelInfo").innerHTML = "Range!";
             reduceTime();
@@ -406,8 +415,9 @@ function checkAnswer() {
     else if (level > 11 && correct) {
         end();
     }
-    writeUserLevel(userID,level);
-
+    if(!instructions) {//Don't write scores from demo
+        writeUserLevel(userID, level);
+    }
 }
 function writeUserLevel(userID, levelCur){
     firebase.database().ref('users/' + userID).set({
@@ -422,17 +432,17 @@ function sumNumbers() {
     else {
         sum = sum *= realArray[lastIndex]
     }
-    console.log("Array " + realArray);
-    console.log("sum: " + sum);
-    console.log("Index " + lastIndex);
+    //console.log("Array " + realArray);
+    //console.log("sum: " + sum);
+    //console.log("Index " + lastIndex);
 
     counter2++;
     if (counter2 === nBack) {
         lastIndex = lastIndex + (-nBack + 2);
-        console.log("Last last index " + lastIndex);
+        //console.log("Last last index " + lastIndex);
         counter2 = 0;
         returnSum = sum;
-        console.log("RETURN SUM " + returnSum);
+        //console.log("RETURN SUM " + returnSum);
         sum = zeroOrOne;
         return returnSum;
     }

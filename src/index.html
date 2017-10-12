@@ -88,6 +88,7 @@
 
     </div>
     <div id="Game">
+        <p id="DescriptionDemo">Add the last number to the current number</p>
         <div id="solution"></div>
         <canvas id="GameCanvas" width="550" height="550"></canvas>
         <form id="Input" class="form-group" onsubmit="return false">
@@ -157,7 +158,6 @@
             document.getElementById("password").style.visibility = "hidden";
 
             // document.getElementById("contain").style.visibility = "hidden";
-            displayEmail();
 
     }
     function loginWithEnter(){
@@ -170,6 +170,7 @@
         //console.log("User is: " + firebase.auth().currentUser.toString());
         firebase.auth().signOut().then(function g() {
             userIsAuthed = false;
+            document.getElementById("Email").innerHTML = "Signed out";
         });
         document.getElementById("btnLogOut").style.visibility = "hidden";
         document.getElementById("btnLogin").style.visibility = "hidden";
@@ -187,6 +188,11 @@
         position: absolute;
         left: 215px;
         visibility: hidden;
+        -webkit-transition-duration: 0.3s;
+    }
+    #btnLogOut:hover{
+        background-color: darkcyan;
+        color: whitesmoke;
     }
 
     body #inputs{
@@ -198,6 +204,11 @@
     #btnLogin{
         position: absolute;
         left: 215px;
+        -webkit-transition-duration: 0.3s;
+    }
+    #btnLogin:hover{
+        background-color: darkcyan;
+        color: whitesmoke;
     }
     #password{
         position: absolute;

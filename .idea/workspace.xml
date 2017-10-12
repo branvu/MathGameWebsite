@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2dfd582-adda-43f5-946f-01cd89edc052" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exportToHTML/public/MainOptimized.js" afterPath="$PROJECT_DIR$/exportToHTML/public/MainOptimized.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exportToHTML/public/MainPageStyle.css" afterPath="$PROJECT_DIR$/exportToHTML/public/MainPageStyle.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exportToHTML/public/index.html" afterPath="$PROJECT_DIR$/exportToHTML/public/index.html" />
@@ -29,8 +28,8 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="249">
-                  <caret line="95" column="31" lean-forward="true" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="31" />
+                <state relative-caret-position="147">
+                  <caret line="128" column="24" lean-forward="true" selection-start-line="128" selection-start-column="24" selection-end-line="128" selection-end-column="24" />
                   <folding>
                     <element signature="n#script#4;n#head#0;n#html#0;n#!!top" expanded="false" />
                   </folding>
@@ -41,8 +40,8 @@
           <file leaf-file-name="MainOptimized.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/MainOptimized.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="214">
-                  <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+                <state relative-caret-position="283">
+                  <caret line="389" column="69" lean-forward="true" selection-start-line="389" selection-start-column="69" selection-end-line="389" selection-end-column="69" />
                   <folding />
                 </state>
               </provider>
@@ -55,8 +54,8 @@
           <file leaf-file-name="MainPageStyle.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/MainPageStyle.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="147">
-                  <caret line="81" column="1" lean-forward="true" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+                <state relative-caret-position="257">
+                  <caret line="150" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="277" selection-end-column="1" />
                   <folding />
                 </state>
               </provider>
@@ -78,17 +77,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>!instructions</find>
-      <find>answerVe</find>
-      <find>level++</find>
-      <find>green</find>
-      <find>NextLevel</find>
-      <find>zeroOrOne</find>
       <find>instructionsPressed</find>
       <find>counter</find>
       <find>console.log</find>
       <find>st</find>
-      <find>demo</find>
       <find>initialDel</find>
       <find>header</find>
       <find>cdn</find>
@@ -97,17 +89,24 @@
       <find>h1</find>
       <find>contain</find>
       <find>key</find>
-      <find>nextLevel</find>
       <find>answer</find>
       <find>userI</find>
       <find>start</find>
       <find>please</find>
       <find>N-ba</find>
-      <find>Email</find>
       <find>n-back</find>
       <find>read</find>
       <find>keycode</find>
+      <find>Email</find>
       <find>next</find>
+      <find>Demo</find>
+      <find>nextLevel</find>
+      <find>console</find>
+      <find>Desc</find>
+      <find>reset</find>
+      <find>demo</find>
+      <find>resetPressed</find>
+      <find>sign</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -131,12 +130,12 @@
         <option value="$PROJECT_DIR$/src/Instructions.html" />
         <option value="$PROJECT_DIR$/exportToHTML/public/Instructions.html" />
         <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/src/MainOptimized.js" />
         <option value="$PROJECT_DIR$/src/MainPageStyle.css" />
         <option value="$PROJECT_DIR$/src/index.html" />
-        <option value="$PROJECT_DIR$/src/MainOptimized.js" />
-        <option value="$PROJECT_DIR$/exportToHTML/public/MainPageStyle.css" />
-        <option value="$PROJECT_DIR$/exportToHTML/public/MainOptimized.js" />
         <option value="$PROJECT_DIR$/exportToHTML/public/index.html" />
+        <option value="$PROJECT_DIR$/exportToHTML/public/MainOptimized.js" />
+        <option value="$PROJECT_DIR$/exportToHTML/public/MainPageStyle.css" />
       </list>
     </option>
   </component>
@@ -368,12 +367,12 @@
       <workItem from="1507378923385" duration="25887000" />
       <workItem from="1507497119840" duration="4578000" />
       <workItem from="1507591142867" duration="4455000" />
-      <workItem from="1507758593851" duration="2570000" />
+      <workItem from="1507758593851" duration="5033000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143709000" />
+    <option name="totallyTimeSpent" value="146172000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -639,7 +638,7 @@
           <caret line="273" column="5" lean-forward="false" selection-start-line="273" selection-start-column="5" selection-end-line="273" selection-end-column="5" />
           <folding>
             <element signature="n#script#4;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1507765668789" expanded="false" signature="469:931" ph="..." />
+            <marker date="1507769320869" expanded="false" signature="469:931" ph="..." />
           </folding>
         </state>
       </provider>
@@ -733,51 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exportToHTML/public/MainPageStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="743">
-          <caret line="268" column="1" lean-forward="false" selection-start-line="268" selection-start-column="1" selection-end-line="268" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exportToHTML/public/MainOptimized.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="743">
-          <caret line="449" column="0" lean-forward="false" selection-start-line="449" selection-start-column="0" selection-end-line="449" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainPageStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="81" column="1" lean-forward="true" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exportToHTML/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="743">
-          <caret line="213" column="7" lean-forward="false" selection-start-line="213" selection-start-column="7" selection-end-line="213" selection-end-column="7" />
-          <folding>
-            <element signature="n#script#4;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1507765668789" expanded="false" signature="469:931" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="95" column="31" lean-forward="true" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="31" />
-          <folding>
-            <element signature="n#script#4;n#head#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -786,10 +740,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/exportToHTML/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="743">
+          <caret line="224" column="7" lean-forward="false" selection-start-line="224" selection-start-column="7" selection-end-line="224" selection-end-column="7" />
+          <folding>
+            <element signature="n#script#4;n#head#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1507769320869" expanded="false" signature="469:931" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="128" column="24" lean-forward="true" selection-start-line="128" selection-start-column="24" selection-end-line="128" selection-end-column="24" />
+          <folding>
+            <element signature="n#script#4;n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exportToHTML/public/MainOptimized.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="743">
+          <caret line="459" column="0" lean-forward="false" selection-start-line="459" selection-start-column="0" selection-end-line="459" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exportToHTML/public/MainPageStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="743">
+          <caret line="277" column="1" lean-forward="false" selection-start-line="277" selection-start-column="1" selection-end-line="277" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainPageStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="150" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="277" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MainOptimized.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state relative-caret-position="283">
+          <caret line="389" column="69" lean-forward="true" selection-start-line="389" selection-start-column="69" selection-end-line="389" selection-end-column="69" />
           <folding />
         </state>
       </provider>

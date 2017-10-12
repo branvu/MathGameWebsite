@@ -110,8 +110,8 @@ body #back{
     font-weight: bold;
 }
 body #start{
-    border-radius: 15px;
-    border: 2px solid deepskyblue;
+    border-radius: 20px;
+    border: 5px solid deepskyblue;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.3s;
     position: absolute;
@@ -122,8 +122,8 @@ body #start{
     font-size: 50px;
 }
 body #instructions{
-    border-radius: 15px;
-    border: 2px solid deepskyblue;
+    border-radius: 20px;
+    border: 5px solid deepskyblue;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     position: absolute;
@@ -137,7 +137,7 @@ body #instructions{
 body #reset{
     font-size: 28px;
     border-radius: 15px;
-    border: 3px solid deepskyblue;
+    border: 5px solid deepskyblue;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.3s;
     position: absolute;
@@ -243,6 +243,7 @@ body #levelInfo{
     font-weight: bold;
     color: cadetblue;
     visibility: hidden;
+
 }
 body{
     background-color: #bbdbe6
@@ -266,4 +267,12 @@ h1{
     top: 5%;
     left: 5%;
     z-index: 1;
+}
+#DescriptionDemo{
+    font-size: 20px;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    z-index: 1;
+    visibility: hidden;
 }
