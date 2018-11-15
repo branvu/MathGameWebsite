@@ -95,7 +95,6 @@ function startPressed() {
         console.log("Not authorized");
         document.getElementById("N-BackTitle").style.visibility = "hidden";
         document.getElementById("LoginError").style.visibility = "visible";
-
     }
 }
 
@@ -182,7 +181,7 @@ var lastIndex = 0;
 var counter2 = 0;
 var ableToInput;
 var timeExpiredHasPassed = false;
-var initialDeltaTime = 3000;
+var initialDeltaTime = 6000;
 var deltaTime = initialDeltaTime;
 var returnSum = 0;
 var numberCorrect = 0;
@@ -427,6 +426,7 @@ function writeUserLevel(userID, levelCur){
 function sumNumbers() {
     var realArray = array.map(Number);
     if (zeroOrOne === 0) {
+        //sum = realArray[lastIndex] -= sum;
         sum = sum += realArray[lastIndex];
     }
     else {
@@ -444,6 +444,7 @@ function sumNumbers() {
         returnSum = sum;
         //console.log("RETURN SUM " + returnSum);
         sum = zeroOrOne;
+        console.log("ting " + returnSum);
         return returnSum;
     }
     else {
