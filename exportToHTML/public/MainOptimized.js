@@ -15,7 +15,7 @@ function isProduct(yes) {
     }
 }
 function initCanvas(){
-
+    hideMultiplication();
 }
 var maxTime = 30000;
 var timerID = 0;
@@ -69,7 +69,15 @@ function instructionsPressed() {
     instructions = true;
     startPressed();
 }
-
+function startMultiplication(){
+    startPressed();
+    isProduct(true);
+    zeroOrOne = 1;
+}
+function startAddition(){
+    startPressed();
+    isProduct(false);
+}
 function startPressed() {
     if(userIsAuthed) {
         document.getElementById("btnLogOut").style.visibility = "hidden";
@@ -85,7 +93,6 @@ function startPressed() {
         document.getElementById("score").style.visibility = "hidden";
         document.getElementById("demo").style.visibility = "hidden";
         document.getElementById("solution").style.visibility = "hidden";
-
         counter = 0;
         timerID = setTimeout(timeUp,timeLeft);
         pastTime = Date.now();
@@ -95,7 +102,6 @@ function startPressed() {
         console.log("Not authorized");
         document.getElementById("N-BackTitle").style.visibility = "hidden";
         document.getElementById("LoginError").style.visibility = "visible";
-
     }
 }
 
@@ -182,7 +188,7 @@ var lastIndex = 0;
 var counter2 = 0;
 var ableToInput;
 var timeExpiredHasPassed = false;
-var initialDeltaTime = 3000;
+var initialDeltaTime = 6000;
 var deltaTime = initialDeltaTime;
 var returnSum = 0;
 var numberCorrect = 0;
@@ -202,7 +208,7 @@ if(timeLeft < 0){
     timeUp();
 }
 function init() {
-    isProduct(false);//Set this to true to get multiplication or in level, change yes2
+    //isProduct(false);//Set this to true to get multiplication or in level, change yes2
     sum = zeroOrOne;
     array.push(randomNumber().toString());
     //console.log("counter " + counter);
@@ -427,6 +433,7 @@ function writeUserLevel(userID, levelCur){
 function sumNumbers() {
     var realArray = array.map(Number);
     if (zeroOrOne === 0) {
+        //sum = realArray[lastIndex] -= sum;
         sum = sum += realArray[lastIndex];
     }
     else {
@@ -444,6 +451,7 @@ function sumNumbers() {
         returnSum = sum;
         //console.log("RETURN SUM " + returnSum);
         sum = zeroOrOne;
+        console.log("ting " + returnSum);
         return returnSum;
     }
     else {
@@ -456,4 +464,8 @@ function moveText() {
     if (returnSum >= 10) {
         document.getElementById("demo").style.left = "39.2%";
     }
+}
+
+function hideMultiplication(){
+    document.getElementById("multiplication").style.visibility = "hidden";
 }

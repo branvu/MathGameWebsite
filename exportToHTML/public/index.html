@@ -81,7 +81,8 @@
         <div id="Email"></div>
         <p id="LoginError">Login failed. Try again</p>
         <canvas id="menuCanvas" width="550" height="550"></canvas>
-        <button id="start" type="button" class="btn btn-secondary btn-lg " onclick="startPressed()">Start</button>
+        <button id="start" type="button" class="btn btn-secondary btn-lg " onclick="startAddition()">Addition</button>
+        <button id="startMulti" type="button" class="btn btn-secondary btn-lg " onclick="startMultiplication()">Multiplication</button>
         <button id="instructions" type="button" class="btn btn-secondary btn-lg " onclick="instructionsPressed()">
             Demo
         </button>
@@ -123,14 +124,18 @@
 </body>
 <script>
     var userIsAuthed = false;
+    var userIsLoggedIn = false;
     var userID;
     firebase.auth().onAuthStateChanged(function(authData) {
         if (authData) {
             console.log("User " + authData.uid + " Email: " + authData.email);
             document.getElementById("Email").innerHTML = "Logged in as: " + authData.email;
             userID = authData.uid;
+            userIsLoggedIn = true;
+            document.getElementById("LoginError").style.visibility = "hidden";
         } else {
             console.log("User is logged out");
+            userIsLoggedIn = false;
         }
     });
     var stringEmail;
@@ -157,6 +162,8 @@
         document.getElementById("btnLogin").style.visibility = "hidden";
         document.getElementById("emailInput").style.visibility = "hidden";
         document.getElementById("password").style.visibility = "hidden";
+        document.getElementById("LoginError").style.visibility = "hidden";
+
 
         // document.getElementById("contain").style.visibility = "hidden";
 

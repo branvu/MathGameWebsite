@@ -15,7 +15,7 @@ function isProduct(yes) {
     }
 }
 function initCanvas(){
-
+    hideMultiplication();
 }
 var maxTime = 30000;
 var timerID = 0;
@@ -69,7 +69,15 @@ function instructionsPressed() {
     instructions = true;
     startPressed();
 }
-
+function startMultiplication(){
+    startPressed();
+    isProduct(true);
+    zeroOrOne = 1;
+}
+function startAddition(){
+    startPressed();
+    isProduct(false);
+}
 function startPressed() {
     if(userIsAuthed) {
         document.getElementById("btnLogOut").style.visibility = "hidden";
@@ -85,7 +93,6 @@ function startPressed() {
         document.getElementById("score").style.visibility = "hidden";
         document.getElementById("demo").style.visibility = "hidden";
         document.getElementById("solution").style.visibility = "hidden";
-
         counter = 0;
         timerID = setTimeout(timeUp,timeLeft);
         pastTime = Date.now();
@@ -201,7 +208,7 @@ if(timeLeft < 0){
     timeUp();
 }
 function init() {
-    isProduct(false);//Set this to true to get multiplication or in level, change yes2
+    //isProduct(false);//Set this to true to get multiplication or in level, change yes2
     sum = zeroOrOne;
     array.push(randomNumber().toString());
     //console.log("counter " + counter);
@@ -420,7 +427,7 @@ function checkAnswer() {
 }
 function writeUserLevel(userID, levelCur){
     firebase.database().ref('users/' + userID).set({
-       levelCur: levelCur
+        levelCur: levelCur
     });
 }
 function sumNumbers() {
@@ -457,4 +464,8 @@ function moveText() {
     if (returnSum >= 10) {
         document.getElementById("demo").style.left = "39.2%";
     }
+}
+
+function hideMultiplication(){
+    document.getElementById("multiplication").style.visibility = "hidden";
 }

@@ -116,10 +116,22 @@ body #start{
     transition-duration: 0.3s;
     position: absolute;
     text-align: center;
-    left: 67%;
+    left: 50%;
     top: 55%;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 40px;
+}
+body #startMulti{
+    border-radius: 20px;
+    border: 5px solid deepskyblue;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.3s;
+    position: absolute;
+    text-align: center;
+    left: 45%;
+    top: 75%;
+    font-weight: bold;
+    font-size: 40px;
 }
 body #instructions{
     border-radius: 20px;
@@ -154,6 +166,10 @@ body #instructions:hover {
     color: whitesmoke;
 }
 body #start:hover{
+    background-color: darkcyan;
+    color: whitesmoke;
+}
+body #startMulti:hover{
     background-color: darkcyan;
     color: whitesmoke;
 }
