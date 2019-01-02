@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e2dfd582-adda-43f5-946f-01cd89edc052" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exportToHTML/public/Instructions.html" afterPath="$PROJECT_DIR$/exportToHTML/public/Instructions.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exportToHTML/public/MainOptimized.js" afterPath="$PROJECT_DIR$/exportToHTML/public/MainOptimized.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exportToHTML/public/MainPageStyle.css" afterPath="$PROJECT_DIR$/exportToHTML/public/MainPageStyle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exportToHTML/public/index.html" afterPath="$PROJECT_DIR$/exportToHTML/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Instructions.html" afterPath="$PROJECT_DIR$/src/Instructions.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainOptimized.js" afterPath="$PROJECT_DIR$/src/MainOptimized.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainPageStyle.css" afterPath="$PROJECT_DIR$/src/MainPageStyle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,11 +24,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5406746">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="31" column="67" lean-forward="true" selection-start-line="31" selection-start-column="67" selection-end-line="31" selection-end-column="67" />
+                <state relative-caret-position="459">
+                  <caret line="49" column="64" lean-forward="true" selection-start-line="49" selection-start-column="64" selection-end-line="49" selection-end-column="64" />
                   <folding>
                     <element signature="n#script#4;n#head#0;n#html#0;n#!!top" expanded="false" />
                   </folding>
@@ -39,20 +37,40 @@
             </entry>
           </file>
           <file leaf-file-name="MainOptimized.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/exportToHTML/public/MainOptimized.js">
+            <entry file="file://$PROJECT_DIR$/src/MainOptimized.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="861">
-                  <caret line="471" column="0" lean-forward="false" selection-start-line="471" selection-start-column="0" selection-end-line="471" selection-end-column="0" />
+                <state relative-caret-position="271">
+                  <caret line="434" column="40" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="478" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
           <file leaf-file-name="MainOptimized.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/MainOptimized.js">
+            <entry file="file://$PROJECT_DIR$/exportToHTML/public/MainOptimized.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="105" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="471" selection-end-column="0" />
+                <state relative-caret-position="861">
+                  <caret line="478" column="0" lean-forward="false" selection-start-line="478" selection-start-column="0" selection-end-line="478" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Instructions.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Instructions.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="249">
+                  <caret line="101" column="38" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="133" selection-end-column="7" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Instructions.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/exportToHTML/public/Instructions.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="802">
+                  <caret line="133" column="7" lean-forward="false" selection-start-line="133" selection-start-column="7" selection-end-line="133" selection-end-column="7" />
                   <folding />
                 </state>
               </provider>
@@ -65,7 +83,7 @@
           <file leaf-file-name="MainPageStyle.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/MainPageStyle.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="356">
+                <state relative-caret-position="2907">
                   <caret line="171" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="292" selection-end-column="1" />
                   <folding />
                 </state>
@@ -75,7 +93,7 @@
           <file leaf-file-name="MainPageStyle.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/exportToHTML/public/MainPageStyle.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="861">
+                <state relative-caret-position="4964">
                   <caret line="292" column="1" lean-forward="false" selection-start-line="292" selection-start-column="1" selection-end-line="292" selection-end-column="1" />
                   <folding />
                 </state>
@@ -111,7 +129,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cdn</find>
       <find>input</find>
       <find>h1</find>
       <find>contain</find>
@@ -141,6 +158,7 @@
       <find>zeroorone</find>
       <find>start</find>
       <find>init</find>
+      <find>levelCur</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -161,15 +179,15 @@
         <option value="$PROJECT_DIR$/src/OptimizedMainPage.html" />
         <option value="$PROJECT_DIR$/exportToHTML/firebase.json" />
         <option value="$PROJECT_DIR$/src/LogIn.html" />
-        <option value="$PROJECT_DIR$/src/Instructions.html" />
-        <option value="$PROJECT_DIR$/exportToHTML/public/Instructions.html" />
         <option value="$PROJECT_DIR$/.idea/misc.xml" />
         <option value="$PROJECT_DIR$/src/index.html" />
-        <option value="$PROJECT_DIR$/src/MainOptimized.js" />
         <option value="$PROJECT_DIR$/src/MainPageStyle.css" />
         <option value="$PROJECT_DIR$/exportToHTML/public/MainPageStyle.css" />
         <option value="$PROJECT_DIR$/exportToHTML/public/index.html" />
+        <option value="$PROJECT_DIR$/src/Instructions.html" />
+        <option value="$PROJECT_DIR$/src/MainOptimized.js" />
         <option value="$PROJECT_DIR$/exportToHTML/public/MainOptimized.js" />
+        <option value="$PROJECT_DIR$/exportToHTML/public/Instructions.html" />
       </list>
     </option>
   </component>
@@ -202,8 +220,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -238,6 +254,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -400,12 +418,14 @@
       <workItem from="1533417107863" duration="215000" />
       <workItem from="1535903653610" duration="3481000" />
       <workItem from="1540737831877" duration="2908000" />
-      <workItem from="1542246917522" duration="4208000" />
+      <workItem from="1542246917522" duration="4406000" />
+      <workItem from="1545625361487" duration="1507000" />
+      <workItem from="1546468476227" duration="1122000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157844000" />
+    <option name="totallyTimeSpent" value="160671000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -418,8 +438,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12513256" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -429,8 +449,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997879" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -670,14 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProtoTypeCode/MainPageGame.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bootstrap.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -747,13 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exportToHTML/public/Instructions.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="743">
-          <caret line="133" column="7" lean-forward="false" selection-start-line="133" selection-start-column="7" selection-end-line="133" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -775,33 +780,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Instructions.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="41" column="18" lean-forward="false" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProtoTypeCode/MainPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-23">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainPageStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
+        <state relative-caret-position="2907">
           <caret line="171" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="292" selection-end-column="1" />
           <folding />
         </state>
@@ -809,7 +797,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exportToHTML/public/MainPageStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
+        <state relative-caret-position="4964">
           <caret line="292" column="1" lean-forward="false" selection-start-line="292" selection-start-column="1" selection-end-line="292" selection-end-column="1" />
           <folding />
         </state>
@@ -826,10 +814,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProtoTypeCode/MainPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProtoTypeCode/MainPageGame.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="49" column="64" lean-forward="true" selection-start-line="49" selection-start-column="64" selection-end-line="49" selection-end-column="64" />
+          <folding>
+            <element signature="n#script#4;n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MainOptimized.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="105" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="471" selection-end-column="0" />
+        <state relative-caret-position="271">
+          <caret line="434" column="40" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="478" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -837,18 +851,24 @@
     <entry file="file://$PROJECT_DIR$/exportToHTML/public/MainOptimized.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="861">
-          <caret line="471" column="0" lean-forward="false" selection-start-line="471" selection-start-column="0" selection-end-line="471" selection-end-column="0" />
+          <caret line="478" column="0" lean-forward="false" selection-start-line="478" selection-start-column="0" selection-end-line="478" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
+    <entry file="file://$PROJECT_DIR$/exportToHTML/public/Instructions.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="31" column="67" lean-forward="true" selection-start-line="31" selection-start-column="67" selection-end-line="31" selection-end-column="67" />
-          <folding>
-            <element signature="n#script#4;n#head#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="802">
+          <caret line="133" column="7" lean-forward="false" selection-start-line="133" selection-start-column="7" selection-end-line="133" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Instructions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="101" column="38" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="133" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>

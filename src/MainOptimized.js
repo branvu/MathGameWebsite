@@ -106,7 +106,7 @@ function startPressed() {
 }
 
 function reduceTime() {
-    deltaTime -= 500;
+    deltaTime -= 650;
 }
 
 function resetTime() {
@@ -395,7 +395,7 @@ function checkAnswer() {
         nextLevelString = "Level " + level.toString();
         document.getElementById("levelInfo").style.fontSize = "25px";
         document.getElementById("levelInfo").style.fontWeight = "strong";
-        document.getElementById("levelInfo").innerHTML = "Increased Potatoes! Now you have to memorize the last two numbers and add the current";
+        document.getElementById("levelInfo").innerHTML = "Increased Recall!";
 
         document.getElementById("levelInfo").style.fontSize = "75px";
         document.getElementById("levelInfo").style.fontWeight = "normal";
@@ -426,9 +426,16 @@ function checkAnswer() {
     }
 }
 function writeUserLevel(userID, levelCur){
-    firebase.database().ref('users/' + userID).set({
-        levelCur: levelCur
-    });
+    if(zeroOrOne === 0) {
+        firebase.database().ref('usersAdd/' + userID).set({
+            levelCurAdd: levelCur
+        });
+    }
+    else{
+        firebase.database().ref('usersMul/' + userID).set({
+            levelCurMul: levelCur
+        });
+    }
 }
 function sumNumbers() {
     var realArray = array.map(Number);
