@@ -72,10 +72,12 @@ function instructionsPressed() {
 function startMultiplication(){
     startPressed();
     isProduct(true);
+    document.getElementById("curLevel").innerHTML = "Level: " + level.toString();
     zeroOrOne = 1;
 }
 function startAddition(){
     startPressed();
+    document.getElementById("curLevel").innerHTML = "Level: "+ level.toString();
     isProduct(false);
 }
 function startPressed() {
@@ -120,7 +122,7 @@ function resetRange() {
 function nextLevel() {
     stopDisplay();
     resetVariables();
-
+    document.getElementById("curLevel").innerHTML = "Level: " + level.toString();
     document.getElementById("NextText").innerHTML = nextLevelString;
     document.getElementById("NextLevel").style.visibility = "visible";
     document.getElementById("levelInfo").style.visibility = "visible";
@@ -188,7 +190,7 @@ var lastIndex = 0;
 var counter2 = 0;
 var ableToInput;
 var timeExpiredHasPassed = false;
-var initialDeltaTime = 6000;
+var initialDeltaTime = 5000;
 var deltaTime = initialDeltaTime;
 var returnSum = 0;
 var numberCorrect = 0;
@@ -371,9 +373,13 @@ function checkAnswer() {
             document.getElementById("levelInfo").innerHTML = "Faster!";
             reduceTime();
         }
-        else {
+        else if(zeroOrOne === 0){
             document.getElementById("levelInfo").innerHTML = "Range!";
             range++;
+        }
+        else if(zeroOrOne === 1){
+            document.getElementById("levelInfo").innerHTML = "Faster!";
+            reduceTime();
         }
         nextLevel();
     }
@@ -384,9 +390,13 @@ function checkAnswer() {
             document.getElementById("levelInfo").innerHTML = "Faster!";
             reduceTime();
         }
-        else {
+        else if(zeroOrOne === 0){
             document.getElementById("levelInfo").innerHTML = "Range!";
             range++;
+        }
+        else if(zeroOrOne === 1){
+            document.getElementById("levelInfo").innerHTML = "Faster!";
+            reduceTime();
         }
         nextLevel();
     }
@@ -408,17 +418,46 @@ function checkAnswer() {
     if (Math.round(numberCorrect / numOfNums) >= 0.70 && numOfNums > 6 && level > 8 && level <= 11 && correct) {
         level++;
         if (level === 11) {
-            document.getElementById("levelInfo").innerHTML = "Range!";
+            document.getElementById("levelInfo").innerHTML = "Faster!";
             reduceTime();
         }
-        else {
-            document.getElementById("levelInfo").innerHTML = "Faster!";
+        else if(zeroOrOne === 0){
+            document.getElementById("levelInfo").innerHTML = "Range!";
             range++;
+        }
+        else if(zeroOrOne === 1){
+            document.getElementById("levelInfo").innerHTML = "Faster!";
+            reduceTime();
         }
         nextLevelString = "Level " + level.toString();
         nextLevel();//Change the canvas
     }
-    else if (level > 11 && correct) {
+    if (Math.round(numberCorrect / numOfNums) >= 0.70 && numOfNums > 10 && level > 11 && level <= 15 && correct) {
+        level++;
+        if (level === 12) {
+            document.getElementById("levelInfo").innerHTML = "Faster!";
+            reduceTime();
+        }
+        else if(zeroOrOne === 0 && level === 13){
+            document.getElementById("levelInfo").innerHTML = "Range!";
+            range++;
+        }
+        else if(zeroOrOne === 1 && level === 13){
+            document.getElementById("levelInfo").innerHTML = "Faster!";
+            reduceTime();
+        }
+        else if (level===14){
+            document.getElementById("levelInfo").innerHTML = "Faster!";
+            reduceTime();
+        }
+        else if(level === 15){
+            document.getElementById("levelInfo").innerHTML = "Faster!";
+            reduceTime();
+        }
+        nextLevelString = "Level " + level.toString();
+        nextLevel();//Change the canvas
+    }
+    else if (level > 15 && correct) {
         end();
     }
     if(!instructions) {//Don't write scores from demo
