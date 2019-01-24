@@ -110,7 +110,10 @@ function startPressed() {
 function reduceTime() {
     deltaTime -= 650;
 }
-
+function reduceTimeLess()
+{
+    deltaTime -= 300;
+}
 function resetTime() {
     deltaTime = initialDeltaTime;
 }
@@ -366,7 +369,7 @@ function checkAnswer() {
         nextLevelString = "Level " + level.toString();
         nextLevel();//Change the canvas
     }
-    else if (level > 3 && level <= 6 && Math.round(numberCorrect / numOfNums) >= 0.70 && numOfNums > 5 && correct) {
+    else if (level > 3 && level <= 6 && Math.round(numberCorrect / numOfNums) >= 0.70 && numOfNums > 8 && correct) {
         level++;
         nextLevelString = "Level " + level.toString();
         if (level === 6) {
@@ -379,11 +382,11 @@ function checkAnswer() {
         }
         else if(zeroOrOne === 1){
             document.getElementById("levelInfo").innerHTML = "Faster!";
-            reduceTime();
+            reduceTimeLess();
         }
         nextLevel();
     }
-    else if (level > 6 && level < 8 && Math.round(numberCorrect / numOfNums) >= 0.70 && numOfNums > 5 && correct) {
+    else if (level > 6 && level < 8 && Math.round(numberCorrect / numOfNums) >= 0.70 && numOfNums > 10 && correct) {
         level++;
         nextLevelString = "Level " + level.toString();
         if (level === 6) {
@@ -396,30 +399,37 @@ function checkAnswer() {
         }
         else if(zeroOrOne === 1){
             document.getElementById("levelInfo").innerHTML = "Faster!";
-            reduceTime();
+            reduceTimeLess();
         }
         nextLevel();
     }
-    else if (level === 8 && Math.round(numberCorrect / numOfNums) >= 0.80 && numOfNums > 10 && correct) {
+    else if (level === 8 && Math.round(numberCorrect / numOfNums) >= 0.80 && numOfNums > 9 && correct) {
         level++;
         nextLevelString = "Level " + level.toString();
         document.getElementById("levelInfo").style.fontSize = "25px";
         document.getElementById("levelInfo").style.fontWeight = "strong";
         document.getElementById("levelInfo").innerHTML = "Increased Recall!";
 
-        document.getElementById("levelInfo").style.fontSize = "75px";
+        document.getElementById("levelInfo").style.fontSize = "50px";
         document.getElementById("levelInfo").style.fontWeight = "normal";
 
         nBack++;
         resetTime();
         resetRange();
+        if(zeroOrOne === 0){
+            range = 5;
+        }
+        if(zeroOrOne === 1){
+            range = 3;
+        }
         nextLevel();
     }
     if (Math.round(numberCorrect / numOfNums) >= 0.70 && numOfNums > 6 && level > 8 && level <= 11 && correct) {
         level++;
         if (level === 11) {
             document.getElementById("levelInfo").innerHTML = "Faster!";
-            reduceTime();
+            reduceTimeLess();
+            range++;
         }
         else if(zeroOrOne === 0){
             document.getElementById("levelInfo").innerHTML = "Range!";
@@ -427,7 +437,7 @@ function checkAnswer() {
         }
         else if(zeroOrOne === 1){
             document.getElementById("levelInfo").innerHTML = "Faster!";
-            reduceTime();
+            range++;
         }
         nextLevelString = "Level " + level.toString();
         nextLevel();//Change the canvas
@@ -436,7 +446,8 @@ function checkAnswer() {
         level++;
         if (level === 12) {
             document.getElementById("levelInfo").innerHTML = "Faster!";
-            reduceTime();
+            range++;
+            reduceTimeLess();
         }
         else if(zeroOrOne === 0 && level === 13){
             document.getElementById("levelInfo").innerHTML = "Range!";
@@ -444,15 +455,18 @@ function checkAnswer() {
         }
         else if(zeroOrOne === 1 && level === 13){
             document.getElementById("levelInfo").innerHTML = "Faster!";
-            reduceTime();
+            reduceTimeLess();
+            range++;
         }
         else if (level===14){
             document.getElementById("levelInfo").innerHTML = "Faster!";
-            reduceTime();
+            reduceTimeLess();
+            range++;
         }
         else if(level === 15){
             document.getElementById("levelInfo").innerHTML = "Faster!";
-            reduceTime();
+            reduceTimeLess();
+            range++;
         }
         nextLevelString = "Level " + level.toString();
         nextLevel();//Change the canvas
