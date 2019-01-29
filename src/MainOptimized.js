@@ -356,7 +356,7 @@ function checkAnswer() {
     //console.log(correct);
     // if(numOfNums > 1 && numberCorrect > 1){end();}
     isitnextLevel = false;
-    if (Math.round(numberCorrect / numOfNums) >= 0.70 && numOfNums > 5 && level >= 1 && level <= 3 && correct) {
+    if (Math.round(numberCorrect / numOfNums) >= 0.70 && numOfNums > 2 && level >= 1 && level <= 3 && correct) {
         level++;
         if (level === 3) {
             document.getElementById("levelInfo").innerHTML = "Range!";
@@ -369,7 +369,7 @@ function checkAnswer() {
         nextLevelString = "Level " + level.toString();
         nextLevel();//Change the canvas
     }
-    else if (level > 3 && level <= 6 && Math.round(numberCorrect / numOfNums) >= 0.70 && numOfNums > 8 && correct) {
+    else if (level > 3 && level <= 6 && Math.round(numberCorrect / numOfNums) >= 0.70 && numOfNums > 3 && correct) {
         level++;
         nextLevelString = "Level " + level.toString();
         if (level === 6) {
@@ -386,7 +386,7 @@ function checkAnswer() {
         }
         nextLevel();
     }
-    else if (level > 6 && level < 8 && Math.round(numberCorrect / numOfNums) >= 0.70 && numOfNums > 10 && correct) {
+    else if (level > 6 && level < 8 && Math.round(numberCorrect / numOfNums) >= 0.70 && numOfNums > 5 && correct) {
         level++;
         nextLevelString = "Level " + level.toString();
         if (level === 6) {
